@@ -12,41 +12,50 @@
   <section class="game">
     <!-- Title -->
     <div class="title text-center">
-      Rock Paper Scissors
+      <b>Rock Paper Scissors</b>
     </div>
     <!-- Scoreboard Display for User and AI -->
-    <div class="score">
-      <div class="playerScore">
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="playerScore col-sm-4">
         <h2 class="text-center">Player</h2>
         <p class="text-center" id="p-count"> 0 </p>
       </div>
-      <div class="computerScore text-center">
-        <h2>Computer</h2>
+      <div class="col-sm-2">
+        <br>
+        <!-- Player selection buttons -->
+        <div class="options text-center">
+          <button class="rock" onClick="chooseRock()">Rock</button>
+          <button class="scissors" onClick="chooseScissors()">Scissors</button>
+          <button class="paper" onClick="choosePaper()">Paper</button>
+        </div>
+      </div>
+      <div class="computerScore col-sm-4">
+        <h2 class="text-center">Computer</h2>
         <p class="text-center" id="c-count">
           0
         </p>
       </div>
-    </div>
-    <!-- Instructions -->
-    <div class="move text-center">
-      Choose your move
-    </div>
-    <!-- Player selection buttons -->
-    <div class="options text-center">
-      <button class="rock" onClick="chooseRock()">Rock</button>
-      <button class="scissors" onClick="chooseScissors()">Scissors</button>
-      <button class="paper" onClick="choosePaper()">Paper</button>
+      <div class="col-sm-1"></div>
     </div>
     <!-- Show result of round -->
-    <div class="result text-center">
-      Who will win?
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4 text-center images"><img id="leftimg" src="" alt=""></div>
+      <div class="col-sm-2 text-center">
+        <br>
+        <br>
+        <br>
+        <b><p id="result">Choose your move</p></b>
+      </div>
+      <div class="col-sm-4 text-center images"><img id="rightimg" src="" alt=""></div>
+      <div class="col-sm-1"></div>
     </div>
     <!-- Button to reset game -->
     <div class="text-center">
-    <button class="reset" onClick="reset()">Reset</button>
+      <button class="reset" onClick="reset()">Reset</button>
     </div>
     <div class="text-center">
-    <p id="test">penis</p>
     </div>
   </section>
 

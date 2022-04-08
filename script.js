@@ -4,6 +4,7 @@
   let computerChoice = "";
   let pCount = document.getElementById('p-count');
   let cCount = document.getElementById('c-count');
+  let result = document.getElementById('result');
 
 function computerSelect() {
   let choice = Math.floor(Math.random() * 3);
@@ -24,16 +25,24 @@ function chooseRock() {
   computerSelect();
   switch (computerChoice) {
     case "paper":
+      document.getElementById('rightimg').src = 'https://www.kindpng.com/picc/m/131-1318570_transparent-note-paper-png-crumpled-paper-transparent-background.png';
       computerScore++;
+      result.textContent = "You lose!";
       break;
     case "rock":
+    document.getElementById("leftimg").src = 'https://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630,f_auto/Limestone-060-RD010-C-SH_by22j3.jpg';
+    document.getElementById("rightimg").src = 'https://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630,f_auto/Limestone-060-RD010-C-SH_by22j3.jpg';
+    result.textContent = "Tie!";
       break;
     case "scissors":
       playerScore++;
+      document.getElementById('rightimg').src = 'https://freepngimg.com/thumb/scissor/36873-8-scissors-transparent.png';
+      result.textContent = "You win!";
       break;
   }
   pCount.textContent = playerScore;
   cCount.textContent = computerScore;
+  document.getElementById("leftimg").src = 'https://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630,f_auto/Limestone-060-RD010-C-SH_by22j3.jpg';
 }
 
 function choosePaper() {
@@ -41,15 +50,23 @@ function choosePaper() {
   switch (computerChoice) {
     case "scissors":
       computerScore++;
+      document.getElementById('rightimg').src = 'https://freepngimg.com/thumb/scissor/36873-8-scissors-transparent.png';
+      result.textContent = "You lose!";
       break;
     case "paper":
+    document.getElementById('leftimg').src = 'https://www.kindpng.com/picc/m/131-1318570_transparent-note-paper-png-crumpled-paper-transparent-background.png';
+    document.getElementById('rightimg').src = 'https://www.kindpng.com/picc/m/131-1318570_transparent-note-paper-png-crumpled-paper-transparent-background.png';
+    result.textContent = "Tie!";
       break;
     case "rock":
       playerScore++;
+      document.getElementById("rightimg").src = 'https://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630,f_auto/Limestone-060-RD010-C-SH_by22j3.jpg';
+      result.textContent = "You win!";
       break;
   }
   pCount.textContent = playerScore;
   cCount.textContent = computerScore;
+  document.getElementById('leftimg').src = 'https://www.kindpng.com/picc/m/131-1318570_transparent-note-paper-png-crumpled-paper-transparent-background.png';
 }
 
 function chooseScissors() {
@@ -57,15 +74,23 @@ function chooseScissors() {
   switch (computerChoice) {
     case "rock":
       computerScore++;
+      document.getElementById("rightimg").src = 'https://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630,f_auto/Limestone-060-RD010-C-SH_by22j3.jpg';
+      result.textContent = "You lose!";
       break;
     case "scissors":
+    document.getElementById('leftimg').src = 'https://freepngimg.com/thumb/scissor/36873-8-scissors-transparent.png';
+    document.getElementById('rightimg').src = 'https://freepngimg.com/thumb/scissor/36873-8-scissors-transparent.png';
+    result.textContent = "Tie!";
       break;
     case "paper":
+      document.getElementById('rightimg').src = 'https://www.kindpng.com/picc/m/131-1318570_transparent-note-paper-png-crumpled-paper-transparent-background.png';
       playerScore++;
+      result.textContent = "You win!";
       break;
   }
   pCount.textContent = playerScore;
   cCount.textContent = computerScore;
+  document.getElementById('leftimg').src = 'https://freepngimg.com/thumb/scissor/36873-8-scissors-transparent.png';
 }
 
 function reset() {
